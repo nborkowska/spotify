@@ -21,10 +21,10 @@ for c in xrange(maxTestCase):
     output.write('%d %d %d\n' % (noCats, noDogs, noVotes))
     for x in xrange(noVotes):
         species = random.choice(speciesChoices)
-        if species == 'D':
-            competitor = 'C'
+        if species == dog:
+            competitor = cat
         else:
-            competitor = 'D'
+            competitor = dog
         one, two = random.choice(numberChoices), random.choice(numberChoices)
         output.write('%s%d %s%d\n' % (species, one, competitor, two))
 
